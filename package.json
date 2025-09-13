@@ -1,0 +1,50 @@
+{
+  "name": "live-seattle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurrrrrrett3/live-seattle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/gurrrrrrett3/live-seattle/issues"
+  },
+  "homepage": "https://github.com/gurrrrrrett3/live-seattle#readme",
+  "mikro-orm": {
+    "configPaths": [
+      "./src/database/mikro-orm.config.ts"
+    ],
+    "useTsNode": true
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^6.4.16",
+    "@mikro-orm/postgresql": "^6.4.16",
+    "@mikro-orm/reflection": "^6.4.16",
+    "@mikro-orm/sqlite": "^6.4.16",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "fast-csv": "^5.0.5",
+    "maplibre-gl": "^5.6.2",
+    "node-fetch": "^3.3.2",
+    "onebusaway-sdk": "^1.10.6"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^6.4.16",
+    "@types/dat.gui": "^0.7.13",
+    "@types/express": "^5.0.3",
+    "@types/leaflet": "^1.9.20",
+    "@types/node": "^24.3.0",
+    "dat.gui": "^0.7.9",
+    "leaflet": "^1.9.4",
+    "ts-node": "^10.9.2",
+    "vite": "^7.1.3"
+  }
+}
