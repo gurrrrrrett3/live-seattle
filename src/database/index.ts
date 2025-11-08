@@ -22,7 +22,7 @@ export default class Database {
             user: process.env.DB_USER || 'postgres',
             password: process.env.DB_PASSWORD || 'password',
             entities: [Route, Trip],
-            debug: true,
+            // debug: true,
         })
 
         this._em = this._orm.em.fork();

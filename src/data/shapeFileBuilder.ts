@@ -5,8 +5,8 @@ import { resolve } from "path";
 export default class ShapeFileBuilder {
 
     private static readonly edges = {
-        top: Infinity,
-        bottom: -Infinity,
+        top: -Infinity,
+        bottom: Infinity,
         left: Infinity,
         right: -Infinity
     }
@@ -25,11 +25,11 @@ export default class ShapeFileBuilder {
 
         Object.values(shapes).forEach((shape) => {
             shape.positions.forEach((pos) => {
-                if (pos.lat < this.edges.top) {
+                if (pos.lat > this.edges.top) {
                     this.edges.top = pos.lat
                 }
 
-                if (pos.lat > this.edges.bottom) {
+                if (pos.lat < this.edges.bottom) {
                     this.edges.bottom = pos.lat
                 }
 

@@ -1,4 +1,5 @@
 import "./gui.js";
+import "./postitions.js"
 import L from 'leaflet';
 
 export const map = L.map('map').setView([47.603889, -122.33], 13);
@@ -9,3 +10,5 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.control.scale({ imperial: true, metric: true }).addTo(map);
+
+

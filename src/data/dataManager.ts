@@ -21,6 +21,7 @@ export default class DataManager {
     public static async updateRoutes() {
         for (const agencyId in this.agencies) {
             const routes = (await this.client.routesForAgency.list(agencyId)).data.list;
+            console.log(routes)
         }
     }
 

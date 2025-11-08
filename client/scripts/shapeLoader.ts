@@ -77,9 +77,13 @@ export default class ShapeLoader {
             const color = this.colors[entry.id]
 
             L.polyline(shapeData.map(pos => [pos.lat, pos.lon]), {
-                color: color != "" ? `#${color}` : undefined,
-                fill: false
-            }).addTo(map)
+                color: color != "" ? `#${color}` : "#ffffff",
+                fill: false,
+            })
+                .addTo(map)
+                .addEventListener("click", (e) => {
+                    console.log(entry.id)
+                })
 
         }
 
